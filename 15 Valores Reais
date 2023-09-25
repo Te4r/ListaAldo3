@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        double maiorNum  = Double.MIN_VALUE;
+        double menorNum = Double.MAX_VALUE;
+
+        for (int i = 1; i <= 15; i++){
+            System.out.println("Input " + i + "° valor");
+            double valor = ler.nextDouble();
+
+            if (valor > maiorNum){
+                maiorNum = valor;
+            }
+            if (valor > menorNum){
+                menorNum = valor;
+            }
+        }
+        System.out.println("O número maior é: " +maiorNum);
+        System.out.println("O número menor é: " +menorNum);
+        }
+    }
