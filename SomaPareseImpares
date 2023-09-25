@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+        int numero;
+        int somaPares = 0;
+        int somaImpares = 0;
+
+        System.out.println("Digite números inteiros positivos. Para encerrar, digite um número maior que 1000.");
+
+        do {
+            System.out.print("Digite um número: ");
+            numero = ler.nextInt();
+
+            if (numero > 1000) {
+                break;
+            }
+
+            if (numero % 2 == 0) {
+                somaPares += numero;
+            } else {
+                somaImpares += numero;
+            }
+        } while (true);
+
+        System.out.println("Soma dos números pares: " + somaPares);
+        System.out.println("Soma dos números ímpares: " + somaImpares);
+        
+    }
+    }
