@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        Scanner ler = new Scanner(System.in);
+        System.out.print("Digite o número da tabuada que deseja visualizar (1 a 9): ");
+        int tabuadaEscolhida = ler.nextInt();
+
+        if (tabuadaEscolhida < 1 || tabuadaEscolhida > 9) {
+            System.out.println("Número fora do intervalo permitido.");
+        } else {
+            System.out.println("Tabuada do " + tabuadaEscolhida + ":");
+
+            for (int i = 1; i <= 10; i++) {
+                int resultado = tabuadaEscolhida * i;
+                System.out.println(tabuadaEscolhida + " x " + i + " = " + resultado);
+            }
+        }
+
+    }
+    }
