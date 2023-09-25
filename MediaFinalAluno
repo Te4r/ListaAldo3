@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        double maiorMedia = Double.NEGATIVE_INFINITY;
+        double menorMedia = Double.POSITIVE_INFINITY;
+        double somaMedias = 0.0;
+        int contadorAlunos = 0;
+
+        while (true) {
+            System.out.print("Digite a média do aluno (ou uma média negativa para encerrar): ");
+            double media = ler.nextDouble();
+
+            if (media < 0) {
+                break;
+            }
+
+            if (media > maiorMedia) {
+                maiorMedia = media;
+            }
+            if (media < menorMedia) {
+                menorMedia = media;
+            }
+            somaMedias += media;
+            contadorAlunos++;
+        }
+
+        if (contadorAlunos > 0) {
+            double mediaTurma = somaMedias / contadorAlunos;
+            System.out.println("Maior média: " + maiorMedia);
+            System.out.println("Menor média: " + menorMedia);
+            System.out.println("Média da turma: " + mediaTurma);
+        } else {
+            System.out.println("Nenhuma média foi inserida.");
+        }
+
+
+    }
+}
