@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        System.out.print("Digite o número até o qual deseja calcular a soma: ");
+        int n = ler.nextInt();
+        ler.close();
+
+        double soma = 0.0;
+        int numerador = 1;
+        int denominador = 1;
+
+        for (int i = 1; i <= n; i++) {
+            soma += (double) numerador / denominador;
+            numerador += 2;
+            denominador++;
+        }
+
+        System.out.println("A soma é: " + soma);
+    }
+
+    }
